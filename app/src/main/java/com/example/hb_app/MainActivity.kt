@@ -1,6 +1,7 @@
 package com.example.hb_app
 
 import android.os.Bundle
+import android.util.Log
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.Image
@@ -27,6 +28,8 @@ import androidx.compose.ui.tooling.preview.Preview
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        Log.d("Lifecycle", "onCreate")
+        finish()
         setContent {
             HB_AppTheme {
                 // A surface container using the 'background' color from the theme
@@ -38,6 +41,36 @@ class MainActivity : ComponentActivity() {
                 }
             }
         }
+    }
+
+    override fun onStart() {
+        super.onStart()
+        Log.d("Lifecycle", "onStart")
+    }
+
+    override fun onResume() {
+        super.onResume()
+        Log.d("Lifecycle", "onResume")
+    }
+
+    override fun onPause() {
+        super.onPause()
+        Log.d("Lifecycle", "onPause")
+    }
+
+    override fun onStop() {
+        super.onStop()
+        Log.d("Lifecycle", "onStop")
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        Log.d("Lifecycle", "onDestroy")
+    }
+
+    override fun onRestart() {
+        super.onRestart()
+        Log.d("Lifecycle", "onRestart")
     }
 }
 
