@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">HB_App</string>
+    <string name="hb_text">Happy birthday Katrin!</string>
+    <string name="from_text">from Thomas Shalby</string>
+</resources>
